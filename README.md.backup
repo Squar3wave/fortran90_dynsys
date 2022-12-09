@@ -18,9 +18,9 @@
 
 fortran90 examples of simple dynamic systems, for an introductory university class. Aside from the code, all examples include a:
 
-1. Gnuplot script for the plots required by the class assignments 
-2. Makefile, for ease of cleaning/compilation
-3. `*_runner.sh` (sub the `*` with the program name) script to create data folders and run both the compiled example and gnuplot is included in all examples
+1. Makefile, for ease of cleaning/compilation
+2. `*_plotter.plt` (sub the `*` with the program name) Gnuplot script for the plots required by the class assignments 
+3. `*_runner.sh` (see above for the `*`) bash helper script to create data folders and run both the compiled example and gnuplot
 
 Feel free to alter the code  to fit your needs, just don't sell it or keep it to yourself, fortran90 is already hard enough to use and/or get accustomed to, people need all the help they can get! I sure did.
 
@@ -30,9 +30,9 @@ All examples come already compiled and with data generated.
 In order to run them from scratch:
 
 1. Open your terminal of choice and navigate to the example folder
-2. Either use `make clean` to remove the  compiled example and all data and plots, or do so manually
-3. Either use `make` to compile, or do so with preferred/required method of choice
-4. Run the `*_runner.sh` (you may need to run `chmod +x *_runner.sh` to make it executable) script to execute both the example and Gnuplot, or comment the gnuplot line if other plotting/fitting methods are preferred/required.
+2. Either use the `make clean` comand to remove the compiled example and all data and plots, or do so manually
+3. Either use the `make` comand to compile, or do so with preferred/required method of choice
+4. Type `./*_runner.sh` to run the helper script (you may need to run `chmod +x *_runner.sh` to make it executable) in order to execute both the example and Gnuplot, or comment the gnuplot line if other plotting/fitting methods are preferred/required.
 
 Important: should you choose not to use the included `Makefile` and/or `*_runner.sh` script, make sure to create the needed data folders.
 
