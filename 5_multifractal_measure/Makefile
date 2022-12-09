@@ -21,7 +21,7 @@ all: $(OBJS)
 
 clean:
 	rm -f *.o *.mod $(TARGET)
-	rm -f *.dat
+	find -name '*.dat' -delete
 	rm -f fit.log
 	rm -f *.png
 

@@ -7,7 +7,7 @@ program mappa_lyap
   real(dp) :: mu_low, mu_high, mu_delta, itera_low, itera_high, itera_delta
   real(dp) :: x_n, x_np1, log_sum
   integer :: mu_size, itera_size, itera_size_2, i, j, k, l
-  character(len=32) :: file_name
+  character(len=37) :: file_name
 
   !-----------------------------------------------------------------------------------
   ! Variable definition and array allocation
@@ -41,7 +41,7 @@ program mappa_lyap
   x_np1   = 0.0_dp
   lyap_mu = 0.0_dp
   
-  open(28, file= "lyap_mu.dat")
+  open(28, file= "data/lyap_mu.dat")
   
   !-----------------------------------------------------------------------------------
   ! Multiple system evolution for each values of mu,
@@ -54,7 +54,7 @@ program mappa_lyap
     x_n      = 0.1_dp
     lyapunov = 0.0_dp
 
-    write (file_name,"('data_mu_',f19.17,'.dat')") muu(i)
+    write (file_name,"('data/data_mu_',f19.17,'.dat')") muu(i)
     open(i, file = trim(file_name))
     
     lyapunov_calc:do j = 0, itera_size-1

@@ -36,9 +36,9 @@ program henon_map
   allocate(   diff(0:O-1))
   allocate(  c_lin(0:O-1))  
 
-  open(1, file ="euler_henon_1.dat")
-  open(2, file ="gp_henon_log.dat")
-  open(3, file ="gp_henon_coeff.dat")
+  open(1, file ="data/euler_henon_1.dat")
+  open(2, file ="data/gp_henon_log.dat")
+  open(3, file ="data/gp_henon_coeff.dat")
   
    x     = 0.0_dp
    x_1   = 0.0_dp

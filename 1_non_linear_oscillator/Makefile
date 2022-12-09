@@ -3,9 +3,9 @@ FC = gfortran
 OMP = -fopenmp
 
 FFLAGS = -Wall -fcheck=all -O3 $(OMP) -fmax-errors=3
-TARGET = osc_non_arm
+TARGET = osc_non_lin
 
-SOURCES = osc_non_arm.f90 runge_kutta_4.f90 carepackage.f90
+SOURCES = osc_non_lin.f90 runge_kutta_4.f90 carepackage.f90
 
 OBJS = $(SOURCES:.f90=.o)
 
@@ -36,5 +36,5 @@ distclean: clean
 	rm $(TARGET)
 
 
-osc_non_arm.o: carepackage.o runge_kutta_4.o
+osc_non_lin.o: carepackage.o runge_kutta_4.o
 runge_kutta_4.o: carepackage.o

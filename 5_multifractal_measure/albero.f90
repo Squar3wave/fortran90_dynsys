@@ -10,13 +10,13 @@ program albero
   real(dp), allocatable, dimension (:,:) :: moment, ln_mom
   real(dp), dimension (:,:)              :: lin_coeff(0:1,0:3)                                            
 
-  open( 0, file="signal.dat")
-  open( 1, file="mft_mom_1.dat")
-  open( 2, file="mft_mom_2.dat")
-  open( 3, file="mft_mom_3.dat")  
-  open(11, file="mft_lnm_1.dat")
-  open(12, file="mft_lnm_2.dat")
-  open(13, file="mft_lnm_3.dat")
+  open( 0, file="data/signal.dat")
+  open( 1, file="data/mft_mom_1.dat")
+  open( 2, file="data/mft_mom_2.dat")
+  open( 3, file="data/mft_mom_3.dat")  
+  open(11, file="data/mft_lnm_1.dat")
+  open(12, file="data/mft_lnm_2.dat")
+  open(13, file="data/mft_lnm_3.dat")
   
   n_scala = 15
   delta   = 0.8_dp
@@ -160,7 +160,7 @@ program albero
     write(12,*) ln_scales(i), ln_mom(i,2)
     write(13,*) ln_scales(i), ln_mom(i,3)  
     
-    end do
+  end do
   
   close( 0)
   close( 1)

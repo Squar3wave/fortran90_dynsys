@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ ! -d "data" ];
+then
+  mkdir data
+fi
+
 echo "========================================================================="
 echo ""
 echo "Fortran program"

@@ -22,9 +22,9 @@ program lorenz_model
                                            pos_c, dpos_c, &
                                            stat
 
-  open(1, file = "rk4_lorenz.dat")
-  open(2, file = "stz.dat")
-  open(3, file = "gp.dat")
+  open(1, file = "data/rk4_lorenz.dat")
+  open(2, file = "data/stz.dat")
+  open(3, file = "data/gp.dat")
 
   !-----------------------------------------------------------------------------------
   ! legend:

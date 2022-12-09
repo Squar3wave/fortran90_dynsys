@@ -29,7 +29,8 @@ all: $(OBJS)
 
 clean:
 	rm -f *.o *.mod $(TARGET)
-	rm -f *.dat
+	find -name '*.dat' -delete
+	rm -f *.png
 	rm -f fit.log
 	rm -f fort.3
 
