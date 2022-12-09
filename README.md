@@ -36,31 +36,31 @@ In order to run them from scratch:
 
 $$\ddot{x} + 2\lambda\epsilon\dot{x} + \omega_0^2x +\epsilon gx^3 = \epsilon f \cos  [(\omega_0 + \epsilon \sigma) \cdot t]$$
 
-1. Integration using Runge-Kutta 4th order algorithm in two ways:  
+1. Integration using [Runge-Kutta](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) 4th order algorithm in two ways:  
 	* Increasing values of $\sigma$. Starting from the second $\sigma$ value onward, for each evolution the starting conditions are the last values of the previous one.  
 	* Decreasing values of $\sigma$. Same procedure as above.  
 2. Study of maxima behavior in function of $\sigma$ once the forcing effects have subsided for the two kinds of evolution above mentioned  
 3. Comparison between the maxima behavior in function of $\sigma$ for the increasing and decreasing $\sigma$ evolutions  	
 
-### Logistic map  
+### [Logistic map](https://en.wikipedia.org/wiki/Logistic_map)  
 
 $$x(n+1) = \mu x(n)\cdot [1-x(n)]$$
 
-1. Integration with Euler method  
-2. Calculation of all possible Lyapunov coefficients for different $\mu$ values  
+1. Integration using [Euler method](https://en.wikipedia.org/wiki/Euler_method)  
+2. Calculation of all possible [Lyapunov coefficients](https://en.wikipedia.org/wiki/Lyapunov_exponent) for different $\mu$ values  
 
-### Henon map
+### [Henon map](https://en.wikipedia.org/wiki/Henon_map)
 	
 $$\begin{align} 
 x(n+1) &= y(n) + 1 - 1.4\cdot x^2(n)\\
 y(n+1) &= 0.3 \cdot x(n) 
 \end{align}$$
 
-1. Integration with Euler method  
-2. Lyapunov coefficient calculation with Benettin algorithm, for single and double trajectory  
-3. Fractal dimension calculation with Grassberger-Procaccia algorithm and comparison with Kaplan-Yorke conjecture  
+1. Integration using [Euler method](https://en.wikipedia.org/wiki/Euler_method)  
+2. [Lyapunov coefficient](https://en.wikipedia.org/wiki/Lyapunov_exponent) calculation with [Benettin algorithm](https://cds.cern.ch/record/1453295/files/978-3-642-23666-2_BookBackMatter.pdf), for single and double trajectory  
+3. [Fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension) calculation with [Grassberger-Procaccia algorithm](http://www.scholarpedia.org/article/Grassberger-Procaccia_algorithm) and comparison with [Kaplan-Yorke conjecture](https://en.wikipedia.org/wiki/Kaplan%E2%80%93Yorke_conjecture)  
 	
-### Lorenz model 	
+### [Lorenz model](https://en.wikipedia.org/wiki/Lorenz_system)
 
 $$\begin{align}
 \dot{x} &= \sigma\cdot (y - x)\\
@@ -68,9 +68,9 @@ $$\begin{align}
 \dot{z} &= xy - bz
 \end{align}$$
 	
-1. Integration with Runge-Kutta 4th order  
-2. Lyapunov coefficient calculation with Benettin algorithm, for single and triple trajectory  
-3. Fractal dimension calculation with Grassberger-Procaccia algorithm and comparison with Kaplan-Yorke conjecture  
+1. Integration with [Runge-Kutta](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) 4th order  
+2. [Lyapunov coefficient](https://en.wikipedia.org/wiki/Lyapunov_exponent) calculation with [Benettin algorithm](https://cds.cern.ch/record/1453295/files/978-3-642-23666-2_BookBackMatter.pdf), for single and triple trajectory  
+3. [Fractal dimension](https://en.wikipedia.org/wiki/Fractal_dimension) calculation with [Grassberger-Procaccia algorithm](http://www.scholarpedia.org/article/Grassberger-Procaccia_algorithm) and comparison with [Kaplan-Yorke conjecture](https://en.wikipedia.org/wiki/Kaplan%E2%80%93Yorke_conjecture)  
 
 ### Multifractal measure
 
@@ -78,12 +78,16 @@ Generation and study of a multifractal measure with the multiplicative process
 
 ## Online resources
 
-1. [Lyapunov exponent (Wikipedia)](https://en.wikipedia.org/wiki/Lyapunov_exponent)
-2. [Fractal dimension (Wikipedia)](https://en.wikipedia.org/wiki/Fractal_dimension)
-3. [Logistic map (Wikipedia)](https://en.wikipedia.org/wiki/Logistic_map)
-4. [Henon map (Wikipedia)](https://en.wikipedia.org/wiki/Henon_map)
-5. [Lorenz model (Wikipedia)](https://en.wikipedia.org/wiki/Lorenz_system)
+1. [Runge-Kutta algorithm (Wikipedia)](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods)
+2. [Euler method (Wikipedia)](https://en.wikipedia.org/wiki/Euler_method)
+3. [Lyapunov exponent (Wikipedia)](https://en.wikipedia.org/wiki/Lyapunov_exponent)
+4. [Fractal dimension (Wikipedia)](https://en.wikipedia.org/wiki/Fractal_dimension)
+5. [Benettin algorithm (CERN)](https://cds.cern.ch/record/1453295/files/978-3-642-23666-2_BookBackMatter.pdf)
 6. [Kaplan-Yorke conjecture (Wikipedia)](https://en.wikipedia.org/wiki/Kaplan%E2%80%93Yorke_conjecture)
+7. [Grassberger-Procaccia algorithm (Scholarpedia)](http://www.scholarpedia.org/article/Grassberger-Procaccia_algorithm)
+8. [Logistic map (Wikipedia)](https://en.wikipedia.org/wiki/Logistic_map)
+9. [Henon map (Wikipedia)](https://en.wikipedia.org/wiki/Henon_map)
+10. [Lorenz model (Wikipedia)](https://en.wikipedia.org/wiki/Lorenz_system)
 
 ## carepackage.f90
 
