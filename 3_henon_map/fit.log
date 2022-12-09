@@ -1,0 +1,180 @@
+
+
+*******************************************************************************
+Tue Dec  6 18:49:21 2022
+
+
+FIT:    data read from 'gp_henon_log.dat' using 1:2
+        format = x:z
+        #datapoints = 11
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = m*x+q
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             q            
+   0 5.6663897452e+01   0.00e+00  1.14e+00    1.000000e+00   1.000000e+00
+   4 5.3544986032e-03  -4.09e-06  1.14e-04    1.198178e+00  -1.047260e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.0053545
+rel. change during last iteration : -4.09315e-11
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0243915
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000594944
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 1.19818          +/- 0.01176      (0.9812%)
+q               = -1.04726         +/- 0.01492      (1.425%)
+
+correlation matrix of the fit parameters:
+                m      q      
+m               1.000 
+q               0.870  1.000 
+
+
+*******************************************************************************
+Tue Dec  6 18:51:35 2022
+
+
+FIT:    data read from 'gp_henon_log.dat' using 1:2
+        format = x:z
+        #datapoints = 11
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = m*x+q
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             q            
+   0 5.6663897452e+01   0.00e+00  1.14e+00    1.000000e+00   1.000000e+00
+   4 5.3544986032e-03  -4.09e-06  1.14e-04    1.198178e+00  -1.047260e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.0053545
+rel. change during last iteration : -4.09315e-11
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0243915
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000594944
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 1.19818          +/- 0.01176      (0.9812%)
+q               = -1.04726         +/- 0.01492      (1.425%)
+
+correlation matrix of the fit parameters:
+                m      q      
+m               1.000 
+q               0.870  1.000 
+
+
+*******************************************************************************
+Tue Dec  6 18:52:55 2022
+
+
+FIT:    data read from 'gp_henon_log.dat' using 1:2
+        format = x:z
+        #datapoints = 11
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = m*x+q
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             q            
+   0 5.6663897452e+01   0.00e+00  1.14e+00    1.000000e+00   1.000000e+00
+   4 5.3544986032e-03  -4.09e-06  1.14e-04    1.198178e+00  -1.047260e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.0053545
+rel. change during last iteration : -4.09315e-11
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0243915
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000594944
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 1.19818          +/- 0.01176      (0.9812%)
+q               = -1.04726         +/- 0.01492      (1.425%)
+
+correlation matrix of the fit parameters:
+                m      q      
+m               1.000 
+q               0.870  1.000 
+
+
+*******************************************************************************
+Tue Dec  6 18:53:18 2022
+
+
+FIT:    data read from 'gp_henon_log.dat' using 1:2
+        format = x:z
+        #datapoints = 11
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = m*x+q
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             q            
+   0 5.6663897452e+01   0.00e+00  1.14e+00    1.000000e+00   1.000000e+00
+   4 5.3544986032e-03  -4.09e-06  1.14e-04    1.198178e+00  -1.047260e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.0053545
+rel. change during last iteration : -4.09315e-11
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0243915
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000594944
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 1.19818          +/- 0.01176      (0.9812%)
+q               = -1.04726         +/- 0.01492      (1.425%)
+
+correlation matrix of the fit parameters:
+                m      q      
+m               1.000 
+q               0.870  1.000 
+
+
+*******************************************************************************
+Tue Dec  6 18:54:08 2022
+
+
+FIT:    data read from 'gp_henon_log.dat' using 1:2
+        format = x:z
+        #datapoints = 11
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = m*x+q
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             q            
+   0 5.6663897452e+01   0.00e+00  1.14e+00    1.000000e+00   1.000000e+00
+   4 5.3544986032e-03  -4.09e-06  1.14e-04    1.198178e+00  -1.047260e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 0.0053545
+rel. change during last iteration : -4.09315e-11
+
+degrees of freedom    (FIT_NDF)                        : 9
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.0243915
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.000594944
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 1.19818          +/- 0.01176      (0.9812%)
+q               = -1.04726         +/- 0.01492      (1.425%)
+
+correlation matrix of the fit parameters:
+                m      q      
+m               1.000 
+q               0.870  1.000 

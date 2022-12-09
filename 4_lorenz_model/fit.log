@@ -1,0 +1,96 @@
+
+
+*******************************************************************************
+Tue Nov 29 10:35:02 2022
+
+
+FIT:    data read from 'gp.dat' using 1:2
+        format = x:z
+        #datapoints = 13
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = m * x + q
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             q            
+   0 8.1904896348e+02   0.00e+00  5.05e+00    1.000000e+00   1.000000e+00
+   5 4.6186092150e-08  -5.10e-07  5.05e-05   -4.636472e-05   1.018923e-04
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 4.61861e-08
+rel. change during last iteration : -5.10198e-12
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 6.47977e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 4.19874e-09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = -4.63647e-05     +/- 4.803e-06    (10.36%)
+q               = 0.000101892      +/- 3.396e-05    (33.33%)
+
+correlation matrix of the fit parameters:
+                m      q      
+m               1.000 
+q              -0.849  1.000 
+
+
+*******************************************************************************
+Tue Nov 29 10:38:28 2022
+
+
+FIT:    data read from 'gp.dat' using 1:2
+        format = x:z
+BREAK: No data to fit
+
+*******************************************************************************
+Tue Nov 29 10:38:33 2022
+
+
+FIT:    data read from 'gp.dat' using 1:2
+        format = x:z
+BREAK: No data to fit
+
+*******************************************************************************
+Tue Nov 29 10:38:45 2022
+
+
+FIT:    data read from 'gp.dat' using 1:2
+        format = x:z
+BREAK: No data to fit
+
+*******************************************************************************
+Tue Nov 29 10:51:09 2022
+
+
+FIT:    data read from 'gp.dat' using 1:2
+        format = x:z
+        #datapoints = 13
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x) = m * x + q
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   m             q            
+   0 1.4514282475e+03   0.00e+00  5.05e+00    1.000000e+00   1.000000e+00
+   4 1.2446918474e+01  -3.10e-03  5.05e-04    6.039139e-01  -7.039552e+00
+
+After 4 iterations the fit converged.
+final sum of squares of residuals : 12.4469
+rel. change during last iteration : -3.09693e-08
+
+degrees of freedom    (FIT_NDF)                        : 11
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.06374
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.13154
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+m               = 0.603914         +/- 0.07885      (13.06%)
+q               = -7.03955         +/- 0.5576       (7.92%)
+
+correlation matrix of the fit parameters:
+                m      q      
+m               1.000 
+q              -0.849  1.000 
