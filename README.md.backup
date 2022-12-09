@@ -16,9 +16,9 @@
 
 ## Introduction 
 
-fortran90 examples of simple dynamic systems, for an introductory university class. Aside from the code, all examples include a:
+Fortran90 examples of simple dynamic systems, for an introductory university class. Aside from the code, all examples include a:
 
-1. Makefile, for ease of cleaning/compilation
+1. `Makefile` for ease of cleaning/compilation
 2. `*_plotter.plt` (sub the `*` with the program name) Gnuplot script for the plots required by the class assignments 
 3. `*_runner.sh` (see above for the `*`) bash helper script to create data folders and run both the compiled example and gnuplot
 
