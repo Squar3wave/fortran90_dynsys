@@ -99,7 +99,7 @@ The file `carepackage.f90` is a homemade compilation of useful subroutines not p
 
 ## System requirements
 
-All Work was done on Ubuntu 20.04.5 LTS and Arch Linux using the following tools, available for all linux platforms (to my knowledge). Gnuplot and Make are optional, depending on user preference.  
+All Work was done on [Ubuntu](https://ubuntu.com/) 20.04.5 LTS and [Arch Linux](https://archlinux.org/) using the following tools, available for all linux platforms (to my knowledge). Gnuplot and Make are optional, depending on user preference.  
 
 1. [gfortran](https://gcc.gnu.org/wiki/GFortran) (gcc fortran compiler)  
 
