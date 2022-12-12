@@ -100,7 +100,7 @@ Generation and study of a multifractal measure with the multiplicative process
 The file `carepackage.f90` is a homemade compilation of useful subroutines not present by default in fortran90. Right now it contains
 
 1. Ports of `arange` and `linspace` from python
-2. A subroutine for linear fitting (without error calculation) with efficiency comparable with Gnuplot's fitting function
+2. A subroutine for linear fitting (without error calculation) with efficiency comparable with Gnuplot's fitting function, developed with [antonio-evangelista](https://github.com/antonio-evangelista)
 3. A subroutine for searching the max value of a 1D vector, can be easily manipulated to find the minimum
 
 ## System requirements
