@@ -31,6 +31,7 @@ clean:
 	rm -f *.o *.mod $(TARGET)
 	find -name '*.dat' -delete
 	rm -f *.png
+	rm -f fort.*
 
 distclean: clean
 	rm $(TARGET)
