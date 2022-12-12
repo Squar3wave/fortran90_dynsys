@@ -22,7 +22,7 @@ Fortran90 examples of simple dynamic systems, for an introductory university cla
 2. `*_plotter.plt` (sub the `*` with the program name) Gnuplot script for the plots required by the class assignments 
 3. `*_runner.sh` (see above for the `*`) bash helper script to create data folders and run both the compiled example and gnuplot
 
-Feel free to alter the code  to fit your needs, just don't sell it or keep it to yourself, fortran90 is already hard enough to use and/or get accustomed to, people need all the help they can get! I sure did.
+Feel free to alter the code  to fit your needs, just don't keep it to yourself, fortran90 is already hard enough to use and/or get accustomed to, people need all the help they can get! I sure did.
 
 ## Usage
 
