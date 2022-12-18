@@ -1,0 +1,54 @@
+# Lorenz parameters (in order s, r and b)
+10.0
+28.0
+2.6666666666666667
+
+# pos_1 (in order x, y and z) for R-K 4
+1.0
+0.0
+0.0
+
+# pos_2 (in order x, y and z) for single Lyapunov coeff
+3.1
+4.2
+5.7
+
+# dpos_2 (in order x, y and z) for single Lyapunov coeff
+1.0
+1.0
+1.0
+
+# pos_a (in order x, y and z) for triple Lyapunov coeff
+1.0
+2.0
+1.5
+
+# dpos_a (in order x, y and z) for triple Lyapunov coeff
+1.0
+0.0
+0.0
+
+# dpos_b (in order x, y and z) for triple Lyapunov coeff
+0.0
+1.0
+0.0
+
+# dpos_c (in order x, y and z) for triple Lyapunov coeff
+0.0
+0.0
+1.0
+
+# distances for G-P
+0.2
+0.4
+0.7
+1.0
+1.5
+2.0
+3.0
+4.0
+5.0
+6.0
+7.0
+8.0
+10.0

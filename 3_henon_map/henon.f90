@@ -14,6 +14,7 @@ program henon_map
                                            R_1, q_1, d_1, lyap_1, &
                                            R_2, q_2, d_2, lyap_2, &
                                            distance, C, FD, FD_C
+  character(20)                         :: arg
 
   !-------------------------------------------------------------------                                           
   ! Variable definitions, array inizialization
@@ -70,8 +71,13 @@ program henon_map
   !-------------------------------------------------------------------
   ! Simple evolution of the system via Euler's method
   
-   x(0,0) = 0.1_dp
-   x(1,0) = 0.1_dp
+  ! x(0,0) = 0.1_dp
+  ! x(1,0) = 0.1_dp
+  
+  call get_command_argument(3,arg)
+  read (arg,*) x(0,0)
+  call get_command_argument(4,arg)
+  read (arg,*) x(1,0)
   
   write(1,*) x(0,0), x(1,0)
   
@@ -86,18 +92,28 @@ program henon_map
   !-------------------------------------------------------------------
   ! Calculation of Lyapunov exponent with Benettin's alogrithm, 
   ! once again relying on Euler's method for system evolution
-
+  ! via the runner script we feed these values  
+  !  x(0,0)  = 0.1_dp
+  !  x(1,0)  = 0.1_dp
+  ! dx(0,0)  = 0.9_dp
+  ! dx(1,0)  = 0.9_dp
+  
   print "('------------------------------------------------------- ')"
   print "('Lyapunov coefficient for single trajectory')"
   print "('calculated with Benettin algorithm')"
   print "('------------------------------------------------------- ')"
   print "(' ')"
-  
-   x(0,0)  = 0.1_dp
-   x(1,0)  = 0.1_dp
-  dx(0,0)  = 0.9_dp
-  dx(1,0)  = 0.9_dp
-  
+ 
+  call get_command_argument(5,arg)
+  read (arg,*) x(0,0)
+  call get_command_argument(6,arg)
+  read (arg,*) x(1,0)
+  call get_command_argument(7,arg)
+  read (arg,*) dx(0,0)
+  call get_command_argument(8,arg)
+  read (arg,*) dx(1,0)
+     
+ 
   d_0      = dot_product(x(:,0),x(:,0))
   
   do i = 1, N-1
@@ -127,6 +143,16 @@ program henon_map
   ! once again relying on Euler's method for system evolution
   ! and orthogonalizing with Gram-Schmidt every n steps 
   ! as required by Benettin's algorithm
+  ! via the runner script we feed these values  
+  !  x_1(0,0) = 0.8_dp
+  !  x_1(1,0) = 0.1_dp
+  ! dx_1(0,0) = 1.0_dp
+  ! dx_1(1,0) = 0.0_dp
+  !  x_2(0,0) = 0.8_dp
+  !  x_2(1,0) = 0.1_dp
+  ! dx_2(0,0) = 0.0_dp
+  ! dx_2(1,0) = 1.0_dp  
+
   
   print "(' ')"
   print "('------------------------------------------------------- ')"
@@ -135,17 +161,25 @@ program henon_map
   print "('------------------------------------------------------- ')"
   print "(' ')"
 
+
+  call get_command_argument(9,arg)
+  read (arg,*) x_1(0,0)  
+  call get_command_argument(10,arg)
+  read (arg,*) x_1(1,0)  
+  call get_command_argument(11,arg)
+  read (arg,*) dx_1(0,0)  
+  call get_command_argument(12,arg)
+  read (arg,*) dx_1(1,0)  
   
-   x_1(0,0) = 0.8_dp
-   x_1(1,0) = 0.1_dp
-  dx_1(0,0) = 1.0_dp
-  dx_1(1,0) = 0.0_dp
-
-   x_2(0,0) = 0.8_dp
-   x_2(1,0) = 0.1_dp
-  dx_2(0,0) = 0.0_dp
-  dx_2(1,0) = 1.0_dp  
-
+  call get_command_argument(13,arg)
+  read (arg,*) x_2(0,0)  
+  call get_command_argument(14,arg)
+  read (arg,*) x_2(1,0)  
+  call get_command_argument(15,arg)
+  read (arg,*) dx_2(0,0)  
+  call get_command_argument(16,arg)
+  read (arg,*) dx_2(1,0)  
+  
   d_0       = dot_product(x_1(:,0),x_1(:,0))
   
   do i = 1, M-1
@@ -198,6 +232,18 @@ program henon_map
   !-------------------------------------------------------------------
   ! Calculation of the fractal dimension using
   ! Grassberg-Procaccia algorithm
+  ! via the runner script we feed these values  
+  ! dist( 0) = 0.10_dp
+  ! dist( 1) = 0.15_dp
+  ! dist( 2) = 0.20_dp
+  ! dist( 3) = 0.25_dp
+  ! dist( 4) = 0.30_dp
+  ! dist( 5) = 0.35_dp
+  ! dist( 6) = 0.40_dp
+  ! dist( 7) = 0.50_dp
+  ! dist( 8) = 0.60_dp
+  ! dist( 9) = 0.70_dp
+  ! dist(10) = 0.80_dp
   
   print "(' ')"
   print "('------------------------------------------------------- ')"
@@ -205,17 +251,12 @@ program henon_map
   print "('------------------------------------------------------- ')"
   print "(' ')"
   
-  dist( 0) = 0.10_dp
-  dist( 1) = 0.15_dp
-  dist( 2) = 0.20_dp
-  dist( 3) = 0.25_dp
-  dist( 4) = 0.30_dp
-  dist( 5) = 0.35_dp
-  dist( 6) = 0.40_dp
-  dist( 7) = 0.50_dp
-  dist( 8) = 0.60_dp
-  dist( 9) = 0.70_dp
-  dist(10) = 0.80_dp
+  do i = 0,10
+    call get_command_argument(17+i,arg)
+    read (arg,*) dist(i)
+  end do
+  
+  
   
   do i = 0, 10
   
@@ -280,10 +321,17 @@ function henon(x_in)
   real(dp), dimension(:) :: henon(0:1)
   real(dp), intent(in)   :: x_in(0:1)
   real(dp)               :: a,b
+  character(20)          :: ar
+  
+  
+!  a = 1.4_dp
+!  b = 0.3_dp
 
-  a = 1.4_dp
-  b = 0.3_dp
-
+  call get_command_argument(1,ar)
+  read (ar,*) a
+  call get_command_argument(2,ar)
+  read (ar,*) b
+  
   henon(0) = x_in(1) + 1.0_dp - a*(x_in(0)**2)
   henon(1) = b*x_in(0)
 

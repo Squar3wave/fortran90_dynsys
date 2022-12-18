@@ -9,8 +9,8 @@ program lorenz_model
   real(dp)                              :: s, r, b,     &
                                            h, t_0, t_f, &
                                            lyap_coeff, &
-                                           dist, c, FD, FD_KY
-                                           
+                                           dist, c, FD, FD_KY 
+
   real(dp), allocatable, dimension(:)   :: lyap_3, &
                                            dist_l, nu, ln_dis, ln_nu , &
                                            coeff
@@ -21,6 +21,8 @@ program lorenz_model
                                            pos_b, dpos_b, &
                                            pos_c, dpos_c, &
                                            stat
+   character(20) :: arg
+
 
   open(1, file = "data/rk4_lorenz.dat")
   open(2, file = "data/stz.dat")
@@ -44,10 +46,23 @@ program lorenz_model
   ly_c   = 10000
   ly_c_3 = 1000000
     
-       s = 10.0_dp
-       r = 28.0_dp
-       b =  8.0_dp/3.0_dp
-       
+  !-----------------------------------------------------------------------------------
+  ! In the runner script we feed these values to s, r and b, which correspond to the 
+  ! Lorenz attractor
+  !
+  ! s = 10.0_dp
+  ! r = 28.0_dp
+  ! b =  8.0_dp/3.0_dp
+   
+  call get_command_argument(1,arg)
+  read (arg,*) s
+  
+  call get_command_argument(2,arg)
+  read (arg,*) r
+  
+  call get_command_argument(3,arg)
+  read (arg,*) b
+
   allocate(lyap_3(0:2))
   allocate( pos_1(0:2,0:t_size-1))
   allocate(dpos_1(0:2,0:t_size-1))
@@ -98,9 +113,22 @@ program lorenz_model
   
   pos_1      = 0.0_dp
   
-  pos_1(0,0) = 1.0_dp
-  pos_1(1,0) = 0.0_dp
-  pos_1(2,0) = 0.0_dp
+
+  !-----------------------------------------------------------------------------------
+  ! In the runner script we feed these defalut parameters
+  !pos_1(0,0) = 1.0_dp
+  !pos_1(1,0) = 0.0_dp
+  !pos_1(2,0) = 0.0_dp
+
+  call get_command_argument(4,arg)
+  read (arg,*) pos_1(0,0)
+
+  call get_command_argument(5,arg)
+  read (arg,*) pos_1(1,0)
+
+  call get_command_argument(6,arg)
+  read (arg,*) pos_1(2,0)
+
 
   call rk4_1storder_vec(h, t_size, pos_1)
   
@@ -124,14 +152,33 @@ program lorenz_model
   print "(' ')"
   
    pos_2      = 0.0_dp  
-  
-   pos_2(0,0) = 3.1_dp
-   pos_2(1,0) = 4.2_dp
-   pos_2(2,0) = 5.7_dp
 
-  dpos_2(0,0) = 1.0_dp
-  dpos_2(1,0) = 1.0_dp
-  dpos_2(2,0) = 1.0_dp
+  !-----------------------------------------------------------------------------------
+  ! In the runner script we feed these defalut parameters
+  !  pos_2(0,0) = 3.1_dp
+  !  pos_2(1,0) = 4.2_dp
+  !  pos_2(2,0) = 5.7_dp
+  ! dpos_2(0,0) = 1.0_dp
+  ! dpos_2(1,0) = 1.0_dp
+  ! dpos_2(2,0) = 1.0_dp
+
+  call get_command_argument(7,arg)
+  read (arg,*) pos_2(0,0)
+
+  call get_command_argument(8,arg)
+  read (arg,*) pos_2(1,0)
+
+  call get_command_argument(9,arg)
+  read (arg,*) pos_2(2,0)
+
+  call get_command_argument(10,arg)
+  read (arg,*) dpos_2(0,0)
+
+  call get_command_argument(11,arg)
+  read (arg,*) dpos_2(1,0)
+
+  call get_command_argument(12,arg)
+  read (arg,*) dpos_2(2,0)
 
    lyap_coeff = 0.0_dp
   
@@ -151,30 +198,82 @@ program lorenz_model
   print "('------------------------------------------------------- ')"
   print "(' ')"
 
-  
-   pos_a(0,0) = 1.0_dp
-   pos_a(1,0) = 2.0_dp
-   pos_a(2,0) = 1.5_dp
+  !-----------------------------------------------------------------------------------
+  ! In the runner script we feed these defalut parameters
+  !  pos_a(0,0) = 1.0_dp
+  !  pos_a(1,0) = 2.0_dp
+  !  pos_a(2,0) = 1.5_dp
+  ! dpos_a(0,0) = 1.0_dp
+  ! dpos_a(1,0) = 0.0_dp
+  ! dpos_a(2,0) = 0.0_dp
+  !  pos_b(0,0) = 1.0_dp
+  !  pos_b(1,0) = 2.0_dp
+  !  pos_b(2,0) = 1.5_dp
+  ! dpos_b(0,0) = 0.0_dp
+  ! dpos_b(1,0) = 1.0_dp
+  ! dpos_b(2,0) = 0.0_dp
+  !  pos_c(0,0) = 1.0_dp
+  !  pos_c(1,0) = 2.0_dp
+  !  pos_c(2,0) = 1.5_dp
+  ! dpos_c(0,0) = 0.0_dp
+  ! dpos_c(1,0) = 0.0_dp
+  ! dpos_c(2,0) = 1.0_dp
 
-  dpos_a(0,0) = 1.0_dp
-  dpos_a(1,0) = 0.0_dp
-  dpos_a(2,0) = 0.0_dp
-  
-   pos_b(0,0) = 1.0_dp
-   pos_b(1,0) = 2.0_dp
-   pos_b(2,0) = 1.5_dp
+  call get_command_argument(13,arg)
+  read (arg,*) pos_a(0,0)
 
-  dpos_b(0,0) = 0.0_dp
-  dpos_b(1,0) = 1.0_dp
-  dpos_b(2,0) = 0.0_dp
-  
-   pos_c(0,0) = 1.0_dp
-   pos_c(1,0) = 2.0_dp
-   pos_c(2,0) = 1.5_dp
+  call get_command_argument(14,arg)
+  read (arg,*) pos_a(1,0)
 
-  dpos_c(0,0) = 0.0_dp
-  dpos_c(1,0) = 0.0_dp
-  dpos_c(2,0) = 1.0_dp
+  call get_command_argument(15,arg)
+  read (arg,*) pos_a(2,0)
+
+  call get_command_argument(16,arg)
+  read (arg,*) dpos_a(0,0)
+
+  call get_command_argument(17,arg)
+  read (arg,*) dpos_a(1,0)
+
+  call get_command_argument(18,arg)
+  read (arg,*) dpos_a(2,0)
+  
+  
+  call get_command_argument(19,arg)
+  read (arg,*) pos_b(0,0)
+
+  call get_command_argument(20,arg)
+  read (arg,*) pos_b(1,0)
+
+  call get_command_argument(21,arg)
+  read (arg,*) pos_b(2,0)
+
+  call get_command_argument(22,arg)
+  read (arg,*) dpos_b(0,0)
+
+  call get_command_argument(23,arg)
+  read (arg,*) dpos_b(1,0)
+
+  call get_command_argument(24,arg)
+  read (arg,*) dpos_b(2,0)
+
+  
+  call get_command_argument(25,arg)
+  read (arg,*) pos_c(0,0)
+
+  call get_command_argument(26,arg)
+  read (arg,*) pos_c(1,0)
+
+  call get_command_argument(27,arg)
+  read (arg,*) pos_c(2,0)
+
+  call get_command_argument(28,arg)
+  read (arg,*) dpos_c(0,0)
+
+  call get_command_argument(29,arg)
+  read (arg,*) dpos_c(1,0)
+
+  call get_command_argument(30,arg)
+  read (arg,*) dpos_c(2,0)
   
             h = 0.001_dp
   
@@ -200,19 +299,24 @@ program lorenz_model
   print "('------------------------------------------------------- ')"
   print "(' ')"
   
-  dist_l( 0) =  0.2_dp
-  dist_l( 1) =  0.4_dp
-  dist_l( 2) =  0.7_dp
-  dist_l( 3) =  1.0_dp
-  dist_l( 4) =  1.5_dp
-  dist_l( 5) =  2.0_dp
-  dist_l( 6) =  3.0_dp
-  dist_l( 7) =  4.0_dp
-  dist_l( 8) =  5.0_dp
-  dist_l( 9) =  6.0_dp
-  dist_l(10) =  7.0_dp
-  dist_l(11) =  8.0_dp
-  dist_l(12) = 10.0_dp
+!  dist_l( 0) =  0.2_dp
+!  dist_l( 1) =  0.4_dp
+!  dist_l( 2) =  0.7_dp
+!  dist_l( 3) =  1.0_dp
+!  dist_l( 4) =  1.5_dp
+!  dist_l( 5) =  2.0_dp
+!  dist_l( 6) =  3.0_dp
+!  dist_l( 7) =  4.0_dp
+!  dist_l( 8) =  5.0_dp
+!  dist_l( 9) =  6.0_dp
+!  dist_l(10) =  7.0_dp
+!  dist_l(11) =  8.0_dp
+!  dist_l(12) = 10.0_dp
+
+  do i = 0,12
+    call get_command_argument(31+i,arg)
+    read (arg,*) dist_l(i)
+  end do
   
   do i = 0,12
     
@@ -299,11 +403,17 @@ function lorenz (s_in, r_in, b_in,v_in)
   real(dp), intent(in)                 :: r_in, s_in, b_in
   real(dp), dimension (:), intent(in)  :: v_in(0:2)
   real(dp), dimension(:)               :: lorenz(0:2)
-  
+
+  !-----------------------------------------------------------------------------------
+  ! x is proportional to convection rate  
   lorenz(0) =  s_in*(-v_in(0) + v_in(1))
-  
+
+  !-----------------------------------------------------------------------------------
+  ! y is proportional to horizonal temperature variation
   lorenz(1) =  r_in*v_in(0) - v_in(1) - v_in(0)*v_in(2)
-  
+
+  !-----------------------------------------------------------------------------------
+  ! z is proportional to vertical temperature variation
   lorenz(2) = -b_in*v_in(2) + v_in(0)*v_in(1)
  
 end function lorenz

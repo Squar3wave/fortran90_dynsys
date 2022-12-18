@@ -1,0 +1,40 @@
+# Henon parameters (in order a and b)
+1.4
+0.3
+
+# x (in order x, y and z) for Euler
+0.1
+0.1
+
+# x for single Lyapunov coefficient
+0.1
+0.1
+
+# dx for single Lyapunov coefficient
+0.9
+0.9
+
+# x1 for double Lyapunov coefficient
+0.8
+0.1
+
+# dx1 for double Lyapunov coefficient
+1.0
+0.0
+
+# dx2 for double Lyapunov coefficient
+0.0
+1.0
+
+# distances for G-P
+0.10
+0.15
+0.20
+0.25
+0.30
+0.35
+0.40
+0.50
+0.60
+0.70
+0.8

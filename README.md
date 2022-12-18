@@ -22,6 +22,8 @@ Fortran90 examples of simple dynamic systems, for an introductory university cla
 2. `*_plotter.plt` (sub the `*` with the program name) Gnuplot script for the plots required by the class assignments 
 3. `*_runner.sh` (see above for the `*`) bash helper script to create data folders and run both the compiled example and gnuplot
 
+In addition, examples [3](https://github.com/Squar3wave/fortran90_dynsys/tree/master/3_henon_map) and [4](https://github.com/Squar3wave/fortran90_dynsys/tree/master/4_lorenz_model) include a `parameters.txt` file from which the `*_runner.sh` script takes the needed input values. To use these examples stand-alone, just uncomment the values i left in the code and comment all the `get_command_argument` related lines.  
+
 Feel free to alter the code  to fit your needs, just don't keep it to yourself, fortran90 is already hard enough to use and/or get accustomed to, people need all the help they can get! I sure did.
 
 ## Usage
@@ -34,7 +36,8 @@ In order to run them from scratch:
 3. Either use the `make` comand to compile, or do so with preferred/required method of choice
 4. Type `./*_runner.sh` to run the helper script (you may need to run `chmod +x *_runner.sh` to make it executable) in order to execute both the example and Gnuplot, or comment the gnuplot line if other plotting/fitting methods are preferred/required.
 
-Important: should you choose not to use the included `Makefile` and/or `*_runner.sh` script, make sure to create the needed data folders.
+Important: should you choose not to use the included `Makefile` and/or `*_runner.sh` script, make sure to create the needed data folders and to feed the examples the right input values (like for examples [3](https://github.com/Squar3wave/fortran90_dynsys/tree/master/3_henon_map) and [4](https://github.com/Squar3wave/fortran90_dynsys/tree/master/4_lorenz_model)).
+
 
 ## Examples
 
